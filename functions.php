@@ -28,3 +28,21 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+/* mods by thebrentc */
+class ThemeB {
+
+	function themeb_widgets_init() {	
+		register_sidebar( array(
+			'name'          => 'Header Widget Area',
+			'id'            => 'header-widgets',
+			'before_widget' => '<div class="header-widgets">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="header-widgets-title">',
+			'after_title'   => '</h2>',
+		) );
+	}
+	
+}
+
+add_action( 'widgets_init', 'ThemeB::themeb_widgets_init' );
