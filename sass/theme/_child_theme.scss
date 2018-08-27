@@ -1,0 +1,23 @@
+/* foreground navbar and fix footer for fullpage compat */
+#wrapper-navbar, .navbar { z-index: 1; }
+/* #wrapper-footer-full { position: fixed; bottom: 0; z-index: 99; width: 100%; } /* TODO */
+#wrapper-footer-full {z-index: 99; }
+
+/* fullpage-wp mods */
+.fp-tableCell { vertical-align: top !important; padding-top: 10%; }
+
+/* fullscreen-ize */
+body.home #page-wrapper { padding: 0 0 0 0; }
+body.home #content { min-width: 100%; max-width: 100%; }
+body.home #primary { padding-left: 0; padding-right: 0; }
+body.home #fullpage .section { padding-left: 10%; }
+
+/* footer mods */
+#wrapper-footer-full, #wrapper-footer-full *, .site-info { font-size: small; color: grey; }
+#wrapper-footer-full h3 { color: black; }
+#wrapper-footer-full li { list-style-type: none; margin-left: -3.1em; }
+#wrapper-footer-full .widget-title { display: none; }
+#wrapper-footer-full ul li { display: inline; width: 5em; }
+
+/* hide heading on home page */
+body.home h1.entry-title { display: none; }

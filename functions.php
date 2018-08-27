@@ -22,6 +22,10 @@ function theme_enqueue_styles() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
+    
+    /* mods by thebrentc */
+	wp_enqueue_style( 'fullpage-style', get_stylesheet_directory_uri() . '/css/fullpage.min.css', array(), $the_theme->get( 'Version' ) );  // TODO gruntify
+    
 }
 
 function add_child_theme_textdomain() {

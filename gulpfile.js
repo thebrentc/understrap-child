@@ -140,6 +140,9 @@ gulp.task( 'scripts', function() {
         // End - All BS4 stuff
 
         paths.dev + '/js/skip-link-focus-fix.js',
+        
+        // mods by thebrentc - vendor files
+        paths.dev + '/js/fullpage.js',
 
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!
@@ -203,8 +206,8 @@ gulp.task( 'copy-assets', function() {
 
 // UnderStrap SCSS files
     gulp.src( paths.node + 'understrap/sass/**/*.scss' )
-        .pipe( gulp.dest( paths.dev + '/sass/understrap' ) );    
-
+        .pipe( gulp.dest( paths.dev + '/sass/understrap' ) ); 
+        
     return stream;
 });
 
